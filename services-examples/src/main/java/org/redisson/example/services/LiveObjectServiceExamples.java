@@ -76,15 +76,7 @@ public class LiveObjectServiceExamples {
 
         }
 
-        public void addItem(String name, Integer amount) {
-            getItemName2Amount().put(name, amount);
-        }
-
-        public Integer getItemAmount(String name) {
-            return getItemName2Amount().get(name);
-        }
-
-        Map<String, Integer> getItemName2Amount() {
+        public Map<String, Integer> getItemName2Amount() {
             return itemName2Amount;
         }
 
@@ -317,8 +309,8 @@ public class LiveObjectServiceExamples {
         // product object is becoming "live" object
         product = liveObjectService.merge(product);
         
-        product.addItem("apple", 1);
-        product.addItem("banana", 12);
+        product.getItemName2Amount().put("apple", 1);
+        product.getItemName2Amount().put("banana", 12);
         product.setPrice(BigDecimal.valueOf(10));
         product.setUnitsInStock(12);
 
@@ -353,6 +345,7 @@ public class LiveObjectServiceExamples {
         Product attachedProduct = liveObjectService.get(Product.class, 1L);
 
         // ...
+        redisson.shutdown();
     }
 
 }
