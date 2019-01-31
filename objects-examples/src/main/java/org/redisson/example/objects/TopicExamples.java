@@ -30,10 +30,10 @@ public class TopicExamples {
 
         CountDownLatch latch = new CountDownLatch(1);
         
-        RTopic<String> topic = redisson.getTopic("topic2");
-        topic.addListener(new MessageListener<String>() {
+        RTopic topic = redisson.getTopic("topic2");
+        topic.addListener(String.class, new MessageListener<String>() {
             @Override
-            public void onMessage(String channel, String msg) {
+            public void onMessage(CharSequence channel, String msg) {
                 latch.countDown();
             }
         });

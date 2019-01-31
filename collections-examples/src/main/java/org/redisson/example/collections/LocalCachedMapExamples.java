@@ -38,8 +38,7 @@ public class LocalCachedMapExamples {
                 .cacheSize(10000)
                 .evictionPolicy(EvictionPolicy.LRU)
                 .maxIdle(10, TimeUnit.SECONDS)
-                .timeToLive(60, TimeUnit.SECONDS)
-                .invalidateEntryOnChange(true);
+                .timeToLive(60, TimeUnit.SECONDS);
                 
         RLocalCachedMap<String, Integer> cachedMap = redisson.getLocalCachedMap("myMap", options);
         cachedMap.put("a", 1);

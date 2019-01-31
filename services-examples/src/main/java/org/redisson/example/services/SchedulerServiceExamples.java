@@ -20,9 +20,9 @@ import java.util.Collections;
 import java.util.concurrent.Callable;
 import java.util.concurrent.TimeUnit;
 
-import org.redisson.CronSchedule;
 import org.redisson.Redisson;
 import org.redisson.RedissonNode;
+import org.redisson.api.CronSchedule;
 import org.redisson.api.RMap;
 import org.redisson.api.RScheduledExecutorService;
 import org.redisson.api.RedissonClient;

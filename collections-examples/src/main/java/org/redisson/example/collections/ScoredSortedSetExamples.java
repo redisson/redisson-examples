@@ -43,7 +43,7 @@ public class ScoredSortedSetExamples {
         newValues.put("4", 40D);
         newValues.put("5", 50D);
         newValues.put("6", 60D);
-        Long newValuesAmount = set.addAll(newValues);
+        int newValuesAmount = set.addAll(newValues);
         
         Double scoreResult = set.addScore("2", 10);
         set.contains("4");
