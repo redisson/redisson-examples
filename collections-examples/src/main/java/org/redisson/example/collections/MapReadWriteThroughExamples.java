@@ -46,7 +46,7 @@ public class MapReadWriteThroughExamples {
         MapWriter<String, String> mapWriter = new MapWriter<String, String>() {
             
             @Override
-            public void writeAll(Map<String, String> map) {
+            public void write(Map<String, String> map) {
                 try {
                     PreparedStatement preparedStatement = conn.prepareStatement("INSERT INTO student (id, name) values (?, ?)");
                     try {
@@ -65,23 +65,7 @@ public class MapReadWriteThroughExamples {
             }
             
             @Override
-            public void write(String key, String value) {
-                try {
-                    PreparedStatement preparedStatement = conn.prepareStatement("INSERT INTO student (id, name) values (?, ?)");
-                    try {
-                        preparedStatement.setString(1, key);
-                        preparedStatement.setString(2, value);
-                        preparedStatement.executeUpdate();
-                    } finally {
-                        preparedStatement.close();
-                    }
-                } catch (Exception e) {
-                    throw new IllegalStateException(e);
-                }
-            }
-            
-            @Override
-            public void deleteAll(Collection<String> keys) {
+            public void delete(Collection<String> keys) {
                 try {
                     PreparedStatement preparedStatement = conn.prepareStatement("DELETE FROM student where id = ?");
                     try {
@@ -97,21 +81,6 @@ public class MapReadWriteThroughExamples {
                     throw new IllegalStateException(e);
                 }
 
-            }
-            
-            @Override
-            public void delete(String key) {
-                try {
-                    PreparedStatement preparedStatement = conn.prepareStatement("DELETE FROM student where id = ?");
-                    try {
-                        preparedStatement.setString(1, key);
-                        preparedStatement.executeUpdate();
-                    } finally {
-                        preparedStatement.close();
-                    }
-                } catch (Exception e) {
-                    throw new IllegalStateException(e);
-                }
             }
         };
         
