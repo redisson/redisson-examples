@@ -15,6 +15,7 @@
  */
 package org.redisson.example.services;
 
+import java.io.Serializable;
 import java.util.Collections;
 import java.util.concurrent.Callable;
 
@@ -29,7 +30,7 @@ import org.redisson.config.RedissonNodeConfig;
 
 public class ExecutorServiceExamples {
 
-    public static class RunnableTask implements Runnable {
+    public static class RunnableTask implements Runnable, Serializable {
 
         @RInject
         RedissonClient redisson;
@@ -42,7 +43,7 @@ public class ExecutorServiceExamples {
         
     }
     
-    public static class CallableTask implements Callable<String> {
+    public static class CallableTask implements Callable<String>, Serializable {
 
         @RInject
         RedissonClient redisson;
