@@ -63,6 +63,7 @@ public class ExecutorServiceExamples {
             .addNodeAddress("127.0.0.1:7001", "127.0.0.1:7002", "127.0.0.1:7003");
         
         RedissonClient redisson = Redisson.create(config);
+        redisson.getKeys().flushall();
 
         RedissonNodeConfig nodeConfig = new RedissonNodeConfig(config);
         nodeConfig.setExecutorServiceWorkers(Collections.singletonMap("myExecutor", 1));
@@ -75,6 +76,7 @@ public class ExecutorServiceExamples {
         
         e.shutdown();
         node.shutdown();
+        redisson.shutdown();
     }
     
 }
