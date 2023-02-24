@@ -41,8 +41,6 @@ public class LockExamples {
         t.start();
         t.join();
 
-        lock.unlock();
-        
         redisson.shutdown();
     }
     
