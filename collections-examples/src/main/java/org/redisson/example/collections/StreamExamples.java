@@ -15,13 +15,14 @@
  */
 package org.redisson.example.collections;
 
+import java.util.List;
 import java.util.Map;
 
 import org.redisson.Redisson;
-import org.redisson.api.PendingResult;
-import org.redisson.api.RStream;
-import org.redisson.api.RedissonClient;
-import org.redisson.api.StreamMessageId;
+import org.redisson.api.*;
+import org.redisson.api.stream.StreamAddArgs;
+import org.redisson.api.stream.StreamCreateGroupArgs;
+import org.redisson.api.stream.StreamReadGroupArgs;
 
 public class StreamExamples {
 
@@ -30,24 +31,24 @@ public class StreamExamples {
         RedissonClient redisson = Redisson.create();
         
         RStream<String, String> stream = redisson.getStream("test");
-        stream.createGroup("testGroup");
-        
-        StreamMessageId id1 = stream.add("1", "1");
-        StreamMessageId id2 = stream.add("2", "2");
+        stream.createGroup(StreamCreateGroupArgs.name("testGroup"));
+
+        StreamMessageId id1 = stream.add(StreamAddArgs.entry("1", "1"));
+        StreamMessageId id2 = stream.add(StreamAddArgs.entry("2", "2"));
         
         // contains 2 elements
-        Map<StreamMessageId, Map<String, String>> map1 = stream.readGroup("testGroup", "consumer1");
+        Map<StreamMessageId, Map<String, String>> map1 = stream.readGroup("testGroup", "consumer1", StreamReadGroupArgs.neverDelivered());
 
         // ack messages
         stream.ack("testGroup", id1, id2);
-        
-        StreamMessageId id3 = stream.add("3", "3");
-        StreamMessageId id4 = stream.add("4", "4");
+
+        StreamMessageId id3 = stream.add(StreamAddArgs.entry("3", "3"));
+        StreamMessageId id4 = stream.add(StreamAddArgs.entry("4", "4"));
         
         // contains next 2 elements
-        Map<StreamMessageId, Map<String, String>> map2 = stream.readGroup("testGroup", "consumer2");
+        Map<StreamMessageId, Map<String, String>> map2 = stream.readGroup("testGroup", "consumer2", StreamReadGroupArgs.neverDelivered());
 
-        PendingResult pi = stream.listPending("testGroup");
+        List<PendingEntry> pi = stream.listPending("testGroup", StreamMessageId.MIN, StreamMessageId.MAX, 100);
         
         redisson.shutdown();
     }
