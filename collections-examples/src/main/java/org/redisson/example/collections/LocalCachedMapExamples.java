@@ -23,9 +23,9 @@ import java.util.Map.Entry;
 import java.util.concurrent.TimeUnit;
 
 import org.redisson.Redisson;
-import org.redisson.api.LocalCachedMapOptions;
+import org.redisson.api.options.LocalCachedMapOptions;
 import org.redisson.api.RedissonClient;
-import org.redisson.api.LocalCachedMapOptions.EvictionPolicy;
+import org.redisson.api.options.LocalCachedMapOptions.EvictionPolicy;
 import org.redisson.api.RLocalCachedMap;
 
 public class LocalCachedMapExamples {
