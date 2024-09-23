@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd-cpd>
+   <duplication lines="39" tokens="171">
+      <file line="31"
+            path="/workspaces/redisson-examples/services-examples/src/main/java/org/redisson/example/services/ExecutorServiceExamples.java"/>
+      <file line="34"
+            path="/workspaces/redisson-examples/services-examples/src/main/java/org/redisson/example/services/SchedulerServiceExamples.java"/>
+      <codefragment><![CDATA[public class ExecutorServiceExamples {
+
+    public static class RunnableTask implements Runnable, Serializable {
+
+        @RInject
+        RedissonClient redisson;
+
+        @Override
+        public void run() {
+            RMap<String, String> map = redisson.getMap("myMap");
+            map.put("5", "11");
+        }
+        
+    }
+    
+    public static class CallableTask implements Callable<String>, Serializable {
+
+        @RInject
+        RedissonClient redisson;
+        
+        @Override
+        public String call() throws Exception {
+            RMap<String, String> map = redisson.getMap("myMap");
+            map.put("1", "2");
+            return map.get("3");
+        }
+
+    }
+    
+    public static void main(String[] args) {
+        Config config = new Config();
+        config.useClusterServers()
+            .addNodeAddress("127.0.0.1:7001", "127.0.0.1:7002", "127.0.0.1:7003");
+        
+        RedissonClient redisson = Redisson.create(config);
+        redisson.getKeys().flushall();
+
+        RedissonNodeConfig nodeConfig = new RedissonNodeConfig(config);
+        nodeConfig.setExecutorServiceWorkers(Collections.singletonMap("myExecutor", 1));]]></codefragment>
+   </duplication>
+</pmd-cpd>

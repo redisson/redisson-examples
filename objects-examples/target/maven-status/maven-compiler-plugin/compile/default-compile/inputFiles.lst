@@ -1,0 +1,14 @@
+/workspaces/redisson-examples/objects-examples/src/main/java/org/redisson/example/objects/BitSetExamples.java
+/workspaces/redisson-examples/objects-examples/src/main/java/org/redisson/example/objects/ReferenceExamples.java
+/workspaces/redisson-examples/objects-examples/src/main/java/org/redisson/example/objects/BatchExamples.java
+/workspaces/redisson-examples/objects-examples/src/main/java/org/redisson/example/objects/TopicExamples.java
+/workspaces/redisson-examples/objects-examples/src/main/java/org/redisson/example/objects/ScriptExamples.java
+/workspaces/redisson-examples/objects-examples/src/main/java/org/redisson/example/objects/AtomicLongExamples.java
+/workspaces/redisson-examples/objects-examples/src/main/java/org/redisson/example/objects/BucketExamples.java
+/workspaces/redisson-examples/objects-examples/src/main/java/org/redisson/example/objects/HyperLogLogExamples.java
+/workspaces/redisson-examples/objects-examples/src/main/java/org/redisson/example/objects/AtomicDoubleExamples.java
+/workspaces/redisson-examples/objects-examples/src/main/java/org/redisson/example/objects/GeoExamples.java
+/workspaces/redisson-examples/objects-examples/src/main/java/org/redisson/example/objects/SSLExamples.java
+/workspaces/redisson-examples/objects-examples/src/main/java/org/redisson/example/objects/BinaryStreamExamples.java
+/workspaces/redisson-examples/objects-examples/src/main/java/org/redisson/example/objects/BloomFilterExamples.java
+/workspaces/redisson-examples/objects-examples/src/main/java/org/redisson/example/objects/RateLimiterExamples.java

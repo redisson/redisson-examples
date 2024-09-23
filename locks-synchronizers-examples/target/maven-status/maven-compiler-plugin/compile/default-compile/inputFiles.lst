@@ -1,0 +1,8 @@
+/workspaces/redisson-examples/locks-synchronizers-examples/src/main/java/org/redisson/example/locks/SemaphoreExamples.java
+/workspaces/redisson-examples/locks-synchronizers-examples/src/main/java/org/redisson/example/locks/CountDownLatchExamples.java
+/workspaces/redisson-examples/locks-synchronizers-examples/src/main/java/org/redisson/example/locks/PermitExpirableSemaphoreExamples.java
+/workspaces/redisson-examples/locks-synchronizers-examples/src/main/java/org/redisson/example/locks/LockExamples.java
+/workspaces/redisson-examples/locks-synchronizers-examples/src/main/java/org/redisson/example/locks/ReadWriteLockExamples.java
+/workspaces/redisson-examples/locks-synchronizers-examples/src/main/java/org/redisson/example/locks/MultiLockExamples.java
+/workspaces/redisson-examples/locks-synchronizers-examples/src/main/java/org/redisson/example/locks/FairLockExamples.java
+/workspaces/redisson-examples/locks-synchronizers-examples/src/main/java/org/redisson/example/locks/RedLockExamples.java

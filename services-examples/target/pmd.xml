@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="5.3.5" timestamp="2024-09-23T06:35:25.826">
+<file name="/workspaces/redisson-examples/services-examples/src/main/java/org/redisson/example/services/LiveObjectServiceExamples.java">
+<violation beginline="339" endline="339" begincolumn="30" endcolumn="40" rule="UnusedLocalVariable" ruleset="Unused Code" package="org.redisson.example.services" class="LiveObjectServiceExamples" method="main" variable="orderDetail" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'orderDetail'.
+</violation>
+<violation beginline="346" endline="346" begincolumn="17" endcolumn="31" rule="UnusedLocalVariable" ruleset="Unused Code" package="org.redisson.example.services" class="LiveObjectServiceExamples" method="main" variable="attachedProduct" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'attachedProduct'.
+</violation>
+</file>
+</pmd>

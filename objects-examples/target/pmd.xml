@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="5.3.5" timestamp="2024-09-23T06:35:25.090">
+<file name="/workspaces/redisson-examples/objects-examples/src/main/java/org/redisson/example/objects/BinaryStreamExamples.java">
+<violation beginline="44" endline="44" begincolumn="16" endcolumn="18" rule="UnusedLocalVariable" ruleset="Unused Code" package="org.redisson.example.objects" class="BinaryStreamExamples" method="main" variable="str" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'str'.
+</violation>
+</file>
+<file name="/workspaces/redisson-examples/objects-examples/src/main/java/org/redisson/example/objects/BucketExamples.java">
+<violation beginline="32" endline="32" begincolumn="17" endcolumn="25" rule="UnusedLocalVariable" ruleset="Unused Code" package="org.redisson.example.objects" class="BucketExamples" method="main" variable="isUpdated" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'isUpdated'.
+</violation>
+<violation beginline="33" endline="33" begincolumn="16" endcolumn="25" rule="UnusedLocalVariable" ruleset="Unused Code" package="org.redisson.example.objects" class="BucketExamples" method="main" variable="prevObject" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'prevObject'.
+</violation>
+<violation beginline="34" endline="34" begincolumn="17" endcolumn="21" rule="UnusedLocalVariable" ruleset="Unused Code" package="org.redisson.example.objects" class="BucketExamples" method="main" variable="isSet" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'isSet'.
+</violation>
+<violation beginline="35" endline="35" begincolumn="14" endcolumn="23" rule="UnusedLocalVariable" ruleset="Unused Code" package="org.redisson.example.objects" class="BucketExamples" method="main" variable="objectSize" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'objectSize'.
+</violation>
+<violation beginline="39" endline="39" begincolumn="17" endcolumn="24" rule="UnusedLocalVariable" ruleset="Unused Code" package="org.redisson.example.objects" class="BucketExamples" method="main" variable="isNewSet" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'isNewSet'.
+</violation>
+</file>
+<file name="/workspaces/redisson-examples/objects-examples/src/main/java/org/redisson/example/objects/GeoExamples.java">
+<violation beginline="39" endline="39" begincolumn="16" endcolumn="19" rule="UnusedLocalVariable" ruleset="Unused Code" package="org.redisson.example.objects" class="GeoExamples" method="main" variable="dist" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'dist'.
+</violation>
+<violation beginline="41" endline="41" begincolumn="34" endcolumn="36" rule="UnusedLocalVariable" ruleset="Unused Code" package="org.redisson.example.objects" class="GeoExamples" method="main" variable="pos" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'pos'.
+</violation>
+<violation beginline="43" endline="43" begincolumn="22" endcolumn="27" rule="UnusedLocalVariable" ruleset="Unused Code" package="org.redisson.example.objects" class="GeoExamples" method="main" variable="cities" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'cities'.
+</violation>
+<violation beginline="44" endline="44" begincolumn="22" endcolumn="34" rule="UnusedLocalVariable" ruleset="Unused Code" package="org.redisson.example.objects" class="GeoExamples" method="main" variable="allNearCities" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'allNearCities'.
+</violation>
+<violation beginline="46" endline="46" begincolumn="29" endcolumn="46" rule="UnusedLocalVariable" ruleset="Unused Code" package="org.redisson.example.objects" class="GeoExamples" method="main" variable="citiesWithDistance" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'citiesWithDistance'.
+</violation>
+<violation beginline="47" endline="47" begincolumn="29" endcolumn="49" rule="UnusedLocalVariable" ruleset="Unused Code" package="org.redisson.example.objects" class="GeoExamples" method="main" variable="allNearCitiesDistance" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'allNearCitiesDistance'.
+</violation>
+<violation beginline="49" endline="49" begincolumn="34" endcolumn="51" rule="UnusedLocalVariable" ruleset="Unused Code" package="org.redisson.example.objects" class="GeoExamples" method="main" variable="citiesWithPosition" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'citiesWithPosition'.
+</violation>
+<violation beginline="50" endline="50" begincolumn="34" endcolumn="54" rule="UnusedLocalVariable" ruleset="Unused Code" package="org.redisson.example.objects" class="GeoExamples" method="main" variable="allNearCitiesPosition" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'allNearCitiesPosition'.
+</violation>
+</file>
+<file name="/workspaces/redisson-examples/objects-examples/src/main/java/org/redisson/example/objects/ReferenceExamples.java">
+<violation beginline="36" endline="36" begincolumn="25" endcolumn="30" rule="UnusedLocalVariable" ruleset="Unused Code" package="org.redisson.example.objects" class="ReferenceExamples" method="main" variable="bucket" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'bucket'.
+</violation>
+</file>
+<file name="/workspaces/redisson-examples/objects-examples/src/main/java/org/redisson/example/objects/SSLExamples.java">
+<violation beginline="36" endline="36" begincolumn="16" endcolumn="20" rule="UnusedLocalVariable" ruleset="Unused Code" package="org.redisson.example.objects" class="SSLExamples" method="main" variable="value" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'value'.
+</violation>
+</file>
+<file name="/workspaces/redisson-examples/objects-examples/src/main/java/org/redisson/example/objects/ScriptExamples.java">
+<violation beginline="38" endline="38" begincolumn="16" endcolumn="21" rule="UnusedLocalVariable" ruleset="Unused Code" package="org.redisson.example.objects" class="ScriptExamples" method="main" variable="result" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'result'.
+</violation>
+</file>
+</pmd>

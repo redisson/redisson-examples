@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="5.3.5" timestamp="2024-09-23T06:35:24.331">
+<file name="/workspaces/redisson-examples/locks-synchronizers-examples/src/main/java/org/redisson/example/locks/FairLockExamples.java">
+<violation beginline="36" endline="36" begincolumn="23" endcolumn="23" rule="UnusedLocalVariable" ruleset="Unused Code" package="org.redisson.example.locks" class="FairLockExamples" method="main" variable="j" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedLocalVariable" priority="3">
+Avoid unused local variables such as 'j'.
+</violation>
+</file>
+</pmd>

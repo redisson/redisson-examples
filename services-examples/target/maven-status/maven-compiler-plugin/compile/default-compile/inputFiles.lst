@@ -1,0 +1,6 @@
+/workspaces/redisson-examples/services-examples/src/main/java/org/redisson/example/services/SchedulerServiceExamples.java
+/workspaces/redisson-examples/services-examples/src/main/java/org/redisson/example/services/MapReduceExample.java
+/workspaces/redisson-examples/services-examples/src/main/java/org/redisson/example/services/RemoteServiceExamples.java
+/workspaces/redisson-examples/services-examples/src/main/java/org/redisson/example/services/TransactionExamples.java
+/workspaces/redisson-examples/services-examples/src/main/java/org/redisson/example/services/LiveObjectServiceExamples.java
+/workspaces/redisson-examples/services-examples/src/main/java/org/redisson/example/services/ExecutorServiceExamples.java

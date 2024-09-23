@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd-cpd>
+   <duplication lines="42" tokens="220">
+      <file line="34"
+            path="/workspaces/redisson-examples/collections-examples/src/main/java/org/redisson/example/collections/BlockingDequeExamples.java"/>
+      <file line="33"
+            path="/workspaces/redisson-examples/collections-examples/src/main/java/org/redisson/example/collections/DequeExamples.java"/>
+      <codefragment><![CDATA[        RBlockingDeque<String> deque = redisson.getBlockingDeque("myQueue");
+        deque.add("1");
+        deque.add("2");
+        deque.add("3");
+        deque.add("4");
+        
+        deque.contains("1");
+        deque.peek();
+        deque.poll();
+        deque.element();
+        
+        for (String string : deque) {
+            // iteration through bulk loaded values
+        }
+        
+        boolean removedValue = deque.remove("1");
+        deque.removeAll(Arrays.asList("1", "2", "3"));
+        deque.containsAll(Arrays.asList("4", "1", "0"));
+        
+        List<String> secondList = new ArrayList<>();
+        secondList.add("4");
+        secondList.add("5");
+        deque.addAll(secondList);
+
+        RQueue<String> secondQueue = redisson.getQueue("mySecondQueue");
+        
+        deque.pollLastAndOfferFirstTo(secondQueue.getName());
+        
+        deque.addLast("8");
+        deque.addFirst("9");
+        
+        deque.addLast("30");
+        deque.addFirst("80");
+        
+        String firstValue = deque.pollFirst();
+        String lastValue = deque.pollLast();
+        
+        String peekFirstValue = deque.peekFirst();
+        String peekLastValue = deque.peekLast();
+        
+        String firstRemoved = deque.removeFirst();
+        String lastRemoved = deque.removeLast();]]></codefragment>
+   </duplication>
+   <duplication lines="24" tokens="163">
+      <file line="44"
+            path="/workspaces/redisson-examples/collections-examples/src/main/java/org/redisson/example/collections/ListMultimapCacheExamples.java"/>
+      <file line="40"
+            path="/workspaces/redisson-examples/collections-examples/src/main/java/org/redisson/example/collections/ListMultimapExamples.java"/>
+      <codefragment><![CDATA[        multimap.expireKey("1", 10, TimeUnit.SECONDS);
+        
+        RList<Integer> values1 = multimap.get("1");
+        RList<Integer> values2 = multimap.get("2");
+        
+        boolean hasEntry = multimap.containsEntry("1", 3);
+        Collection<Entry<String, Integer>> entries = multimap.entries();
+        Collection<Integer> values = multimap.values();
+        
+        boolean isRemoved = multimap.remove("1", 3);
+        List<Integer> removedValues = multimap.removeAll("1");
+        
+        Collection<? extends Integer> newValues = Arrays.asList(5, 6, 7, 8, 9);
+        boolean isNewKey = multimap.putAll("5", newValues);
+        
+        List<Integer> oldValues = multimap.replaceValues("2", newValues);
+        List<Integer> allValues = multimap.getAll("2");
+
+        long keysRemoved = multimap.fastRemove("2", "32");
+        
+        redisson.shutdown();
+    }
+    
+}]]></codefragment>
+   </duplication>
+   <duplication lines="27" tokens="148">
+      <file line="34"
+            path="/workspaces/redisson-examples/collections-examples/src/main/java/org/redisson/example/collections/BlockingQueueExamples.java"/>
+      <file line="32"
+            path="/workspaces/redisson-examples/collections-examples/src/main/java/org/redisson/example/collections/QueueExamples.java"/>
+      <codefragment><![CDATA[        RBlockingQueue<String> queue = redisson.getBlockingQueue("myQueue");
+        queue.add("1");
+        queue.add("2");
+        queue.add("3");
+        queue.add("4");
+        
+        queue.contains("1");
+        queue.peek();
+        queue.poll();
+        queue.element();
+        
+        for (String string : queue) {
+            // iteration through bulk loaded values
+        }
+        
+        boolean removedValue = queue.remove("1");
+        queue.removeAll(Arrays.asList("1", "2", "3"));
+        queue.containsAll(Arrays.asList("4", "1", "0"));
+        
+        List<String> secondList = new ArrayList<>();
+        secondList.add("4");
+        secondList.add("5");
+        queue.addAll(secondList);
+
+        RQueue<String> secondQueue = redisson.getQueue("mySecondQueue");
+        
+        queue.pollLastAndOfferFirstTo(secondQueue.getName());]]></codefragment>
+   </duplication>
+   <duplication lines="11" tokens="108">
+      <file line="50"
+            path="/workspaces/redisson-examples/collections-examples/src/main/java/org/redisson/example/collections/SetMultimapCacheExamples.java"/>
+      <file line="46"
+            path="/workspaces/redisson-examples/collections-examples/src/main/java/org/redisson/example/collections/SetMultimapExamples.java"/>
+      <codefragment><![CDATA[        Collection<Entry<String, Integer>> entries = multimap.entries();
+        Collection<Integer> values = multimap.values();
+        
+        boolean isRemoved = multimap.remove("1", 3);
+        Set<Integer> removedValues = multimap.removeAll("1");
+        
+        Collection<? extends Integer> newValues = Arrays.asList(5, 6, 7, 8, 9);
+        boolean isNewKey = multimap.putAll("5", newValues);
+        
+        Set<Integer> oldValues = multimap.replaceValues("2", newValues);
+        Set<Integer> allValues = multimap.getAll("2");]]></codefragment>
+   </duplication>
+</pmd-cpd>
