@@ -15,6 +15,7 @@
  */
 package org.redisson.example.collections;
 
+import java.time.Duration;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Map;
@@ -26,7 +27,12 @@ import org.redisson.Redisson;
 import org.redisson.api.options.LocalCachedMapOptions;
 import org.redisson.api.RedissonClient;
 import org.redisson.api.options.LocalCachedMapOptions.EvictionPolicy;
+import org.redisson.Redisson;
 import org.redisson.api.RLocalCachedMap;
+import org.redisson.api.options.LocalCachedMapOptions.ExpirationEventPolicy;
+import org.redisson.api.options.LocalCachedMapOptions.SyncStrategy;
+import org.redisson.client.codec.StringCodec;
+import org.redisson.config.Config;
 
 public class LocalCachedMapExamples {
 
@@ -34,13 +40,17 @@ public class LocalCachedMapExamples {
         // connects to 127.0.0.1:6379 by default
         RedissonClient redisson = Redisson.create();
         
-        LocalCachedMapOptions options = LocalCachedMapOptions.defaults()
-                .cacheSize(10000)
-                .evictionPolicy(EvictionPolicy.LRU)
-                .maxIdle(10, TimeUnit.SECONDS)
-                .timeToLive(60, TimeUnit.SECONDS);
-                
-        RLocalCachedMap<String, Integer> cachedMap = redisson.getLocalCachedMap("myMap", options);
+        // NOTE: Key and Value can be of any type, eg. Object,Integer,Boolean etc.
+        final LocalCachedMapOptions<String, Integer> options = LocalCachedMapOptions.<String, Integer>name("myMap")
+        .cacheSize(10000)
+        .maxIdle(Duration.ofSeconds(60))
+        .timeToLive(Duration.ofSeconds(60))
+        .evictionPolicy(EvictionPolicy.LFU)
+        .syncStrategy(SyncStrategy.UPDATE)
+        .expirationEventPolicy(ExpirationEventPolicy.SUBSCRIBE_WITH_KEYSPACE_CHANNEL);
+
+        // Create a Local Cached Map with options
+        RLocalCachedMap<String, Integer> cachedMap = redisson.getLocalCachedMap(options);
         cachedMap.put("a", 1);
         cachedMap.put("b", 2);
         cachedMap.put("c", 3);
